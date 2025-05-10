@@ -7,7 +7,7 @@ public class GameBoard {
     private final int rows, cols, tileSize;
     private final Set<GameEntity> walls = new HashSet<>();
     private final Set<GameEntity> foods = new HashSet<>();
-    private final Set<GameEntity> ghosts = new HashSet<>();
+    private final Set<Ghost> ghosts = new HashSet<>();
     private final PacMan pacman;
 
     private int score = 0;
@@ -51,7 +51,7 @@ public class GameBoard {
         loadMap();
     }
 
-    public void loabMap(){
+    public void loadMap(){
 
         walls.clear();
         foods.clear();
@@ -196,7 +196,7 @@ public class GameBoard {
     public void handleKeyPress(KeyEvent e){
         if ( levelComplete) {
             levelComplete = false;
-            loabMap();
+            loadMap();
             return;
         }
 

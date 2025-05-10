@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.util.Random;
+import java.util.Set;
 import javax.swing.ImageIcon;
 
 
@@ -32,7 +33,8 @@ public class Ghost extends GameEntity {
 
 
     private Image scaleImage(Image original){
-    return original.getScaledInstance(size, size, Image.SCALE_SMOOTH);
+
+        return original.getScaledInstance(size, size, Image.SCALE_SMOOTH);
 }
 
     private void loadImages(){
