@@ -6,6 +6,7 @@ import java.awt.event.KeyListener;
 import javax.swing.*;
 
 public class GamePanel extends JPanel implements ActionListener, KeyListener {
+
     private final GameBoard board;
     private final Timer timer;
 
@@ -14,7 +15,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
         setBackground(Color.BLACK);
         setFocusable(true);
         addKeyListener(this);
-
 
         board = new GameBoard(rows, cols, tileSize);
         timer = new Timer(50,this);
