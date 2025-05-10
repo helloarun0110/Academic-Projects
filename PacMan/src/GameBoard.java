@@ -69,7 +69,7 @@ public class GameBoard {
                     walls.add(wall);
                 }
                 else if ( ch == ' ') {
-                    GameEntity food = new GameEntity(x, y, tileSize);
+                    GameEntity food = new GameEntity(x + (tileSize - 8) / 2, y + (tileSize - 8) / 2, 8);
                     food.setImage("images/food.png");
                     foods.add(food);
                 }
@@ -93,17 +93,17 @@ public class GameBoard {
 
     public void draw(Graphics g){
         g.setColor(Color.BLACK);
-        g.fillRect( 0, 0, cols * tileSize, cols * tileSize);
+        g.fillRect( 0, 0, cols * tileSize, rows * tileSize);
 
         for (GameEntity wall : walls) wall.draw(g);
         for (GameEntity food : foods) food.draw(g);
-        for (GameEntity ghost : ghosts) ghost.draw(g);
+        for (Ghost ghost : ghosts) ghost.draw(g);
         pacman.draw(g);
 
 
         g.setColor(Color.WHITE);
         g.setFont(new Font("Arial", Font.PLAIN, 18));
-        g.drawString("Lives" + lives + " Score: " + score, 10, 20);
+        g.drawString("Lives: " + lives + " Score: " + score, 10, 20);
 
         if (scareMode) {
             g.drawString("Scared: " + (scaredTimer / 20), cols * tileSize - 100, 20);

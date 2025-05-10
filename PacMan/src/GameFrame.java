@@ -21,5 +21,7 @@ public class GameFrame extends JFrame {
         panel.requestFocusInWindow();
         
     }
+
+    public void start(){}
     
 }

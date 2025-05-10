@@ -15,6 +15,8 @@ public class GameEntity {
     }
 
     public void setImage(String path){
+        //System.out.println("Loading image: " + path);
+
         ImageIcon icon = new ImageIcon(path);
         this.image = icon.getImage().getScaledInstance(size, size, Image.SCALE_SMOOTH);
     }

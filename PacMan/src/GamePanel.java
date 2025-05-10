@@ -7,7 +7,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
     private final GameBoard board;
     private final Timer timer;
 
-    public GamePanel(int rows, int cols, int tileSize){
+    public GamePanel (int rows, int cols, int tileSize){
         setPreferredSize(new Dimension(cols * tileSize, rows * tileSize));
         setBackground(Color.BLACK);
         setFocusable(true);
