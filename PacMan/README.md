@@ -22,19 +22,12 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 
 
 
-##   Use Case Diagram of the PacMan Game Project
+##   Class Diagram of the PacMan Game Project
 
 
 
 
 
-
----
-config:
-  theme: neo
-  layout: elk
-  look: neo
----
 
 ```mermaid
 classDiagram
